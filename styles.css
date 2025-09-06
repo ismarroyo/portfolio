@@ -1,0 +1,58 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Contenedor con margen de 25px en todos los lados */
+.container {
+  padding: 25px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.name h1 {
+  font-size: 1.5rem;
+  font-weight: normal; /* o también 400 */
+}
+
+.name p {
+  font-size: 1.5rem;
+  font-weight: normal; /* o también 400 */
+}
+
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+/* Pie de página */
+footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+/* Contenedor de los dos elementos */
+.footer-left {
+  display: flex;
+  gap: 30px; /* Aquí defines la separación entre los dos elementos */
+}
