@@ -56,3 +56,16 @@ footer {
   display: flex;
   gap: 30px; /* Aquí defines la separación entre los dos elementos */
 }
+
+.insta {
+  text-decoration: none;
+  color: black;
+}
+
+.insta:hover {
+  color: #000dff; /* cambia color al pasar el mouse */
+}
+
+.insta:visited {
+  color: #e4405f; /* mismo color aunque ya se haya visitado */
+}
