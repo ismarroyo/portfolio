@@ -13,11 +13,16 @@ body {
 
 /* Contenedor con margen de 25px en todos los lados */
 .container {
-  padding: 25px;
-  min-height: 100vh;
+  height: 100vh; /* altura total del viewport */
+  padding: 25px; /* margen alrededor */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  flex: 0 0 auto; /* mantienen su altura natural */
 }
 
 /* Encabezado */
@@ -38,17 +43,19 @@ header {
 }
 
 nav a {
+  margin: 0.5rem;
   margin-left: 15px;
   text-decoration: none;
   color: black;
   font-weight: normal;
+  font-size: 1rem;
 }
 
 /* Pie de página */
 footer {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /* Contenedor de los dos elementos */
@@ -60,7 +67,11 @@ footer {
 .insta:link,
 .insta:visited,
 .email:link,
-.email:visited {
+.email:visited,
+.projects:link,
+.projects:visited,
+.about:link,
+.about:visited {
   color: black;
   text-decoration: none;
 }
@@ -68,6 +79,35 @@ footer {
 .insta:hover,
 .insta:active,
 .email:hover,
-.email:active {
+.email:active,
+.projects:hover,
+.projects:active,
+.about:hover,
+.about:active {
   color: #626262;
+}
+
+.clickable-page {
+  cursor: pointer;
+}
+
+.video-container {
+  height: calc(
+    100vh - 25px /* padding-top del container */ - 25px
+      /* padding-bottom del container */ - 50px
+      /* altura aproximada del header */ - 40px
+      /* altura aproximada del footer */
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
