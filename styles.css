@@ -13,7 +13,7 @@ body {
 
 /* Contenedor con margen de 25px en todos los lados */
 .container {
-  height: 100vh; /* altura total del viewport */
+  min-height: 100vh; /* altura total del viewport */
   padding: 25px; /* margen alrededor */
   display: flex;
   flex-direction: column;
@@ -128,9 +128,9 @@ footer {
 
 .project-card img {
   width: 100%;
-  height: auto;
+  height: 500px;
   display: block;
-  border-radius: 8px;
+  object-fit: cover;
 }
 
 .tarjeta {
@@ -142,7 +142,18 @@ footer {
 
 .project-info {
   display: flex;
-  justify-content: space-between; /* un texto a la izq y otro a la dcha */
+  width: 100%; /* ocupa todo el ancho del project-card */
   font-size: 1rem;
-  width: 100%; /* ocupa todo el ancho del contenedor */
+}
+
+.project-info .left {
+  text-align: left; /* pega el texto a la izquierda */
+  flex: 0 1 auto; /* solo ocupa lo que necesita */
+}
+
+.project-info .right {
+  max-width: 60%; /* no aplasta al texto izquierdo */
+  margin-left: auto; /* empuja la caja a la derecha */
+  text-align: left; /* texto dentro de la caja alineado a la izquierda */
+  flex-shrink: 0; /* evita que se reduzca */
 }
