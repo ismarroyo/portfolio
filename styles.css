@@ -230,3 +230,34 @@ footer {
 .semi {
   color: #545454;
 }
+
+.two-columns {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.sticky-text {
+  display: flex; /* convierte el div en flex container */
+  flex-direction: column; /* apila los elementos verticalmente */
+  gap: 25px; /* espacio entre hijos */
+  flex: 0 0 400px; /* ancho fijo de 300px */
+  position: sticky;
+  top: 25px;
+}
+
+/* Columna de imágenes */
+.scroll-images {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.scroll-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
