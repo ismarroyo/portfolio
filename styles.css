@@ -157,3 +157,76 @@ footer {
   text-align: left; /* texto dentro de la caja alineado a la izquierda */
   flex-shrink: 0; /* evita que se reduzca */
 }
+
+.text-with-line {
+  width: 100%; /* o el ancho que quieras */
+  flex: 1;
+}
+
+.text-with-line p {
+  margin: 0; /* elimina márgenes por defecto */
+  margin: 0 0 25px 0; /* solo espacio abajo */
+}
+
+.text-with-line hr {
+  border: none; /* quita borde por defecto */
+  border-top: 2px solid hsla(0, 0%, 0%, 0.5); /* define línea horizontal */
+  width: 100%; /* línea ocupa todo el ancho del contenedor */
+  margin: 25px 0;
+}
+
+.about-content {
+  display: flex;
+  gap: 25px; /* separación entre imagen y texto */
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Imagen a la izquierda con ancho fijo */
+.image-box {
+  width: 400px;
+  flex-shrink: 0; /* evita que se reduzca */
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenedor de las dos columnas */
+.text-columns {
+  flex: 1; /* ocupa el resto del espacio */
+  display: flex;
+  gap: 25px; /* separación entre columnas de texto */
+}
+
+/* Cada columna ocupa la mitad del espacio */
+.text-col1,
+.text-col2 {
+  flex: 1;
+}
+
+.text-col1 p,
+.text-col2 p {
+  margin: 0;
+}
+
+.text-col1-1 {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* primera columna fija, segunda flexible */
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.text1-col1-1 {
+  grid-column: 1;
+}
+
+.text2-col1-1 {
+  grid-column: 2;
+}
+
+.semi {
+  color: #545454;
+}
