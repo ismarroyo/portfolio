@@ -7,7 +7,7 @@
 
 body {
   font-family: "Manrope", sans-serif;
-  background-color: #fff;
+  background-color: #f8f8f8;
   color: #000;
 }
 
@@ -149,6 +149,7 @@ footer {
 .project-info .left {
   text-align: left; /* pega el texto a la izquierda */
   flex: 0 1 auto; /* solo ocupa lo que necesita */
+  font-style: italic;
 }
 
 .project-info .right {
@@ -242,7 +243,7 @@ footer {
 .sticky-text {
   display: flex; /* convierte el div en flex container */
   flex-direction: column; /* apila los elementos verticalmente */
-  gap: 25px; /* espacio entre hijos */
+  gap: 0px; /* espacio entre hijos */
   flex: 0 0 400px; /* ancho fijo de 300px */
   position: sticky;
   top: 25px;
@@ -260,4 +261,36 @@ footer {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between; /* reparte las imágenes ocupando todo el ancho */
+  align-items: flex-start;
+  gap: 20px; /* espacio entre imágenes */
+  width: 100%;
+}
+
+.image-row img {
+  height: 400px; /* todas con la misma altura */
+  width: auto; /* ancho se ajusta según proporción */
+  object-fit: contain; /* asegura que se vea entera */
+  display: block;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: normal;
 }
