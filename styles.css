@@ -278,6 +278,13 @@ footer {
   display: block;
 }
 
+.nexus-logo-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .italic {
   font-style: italic;
 }
@@ -293,4 +300,57 @@ h2 {
   font-size: 1.3rem;
   font-style: normal;
   font-weight: normal;
+}
+
+.scroll-images-three {
+  flex: 2; /* igual que .scroll-images */
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.video-wrapper {
+  width: 100%; /* asegura que ocupe todo el ancho del contenedor */
+}
+
+.video-wrapper video {
+  width: 100%; /* ancho completo */
+  height: auto; /* mantiene proporción */
+  display: block;
+  object-fit: cover; /* si quieres que llene todo el contenedor recortando si es necesario */
+}
+
+.image-row-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* tres columnas iguales */
+  gap: 20px; /* espacio entre imágenes */
+  width: 100%; /* asegura que no se salga */
+}
+
+.image-row-three img {
+  width: 100%; /* ocupa todo el ancho de su columna */
+  height: auto; /* mantiene proporción */
+  object-fit: cover; /* si quieres llenar recortando */
+  display: block;
+}
+
+.scroll-images-three > img {
+  width: 100%; /* último img ocupa todo el ancho del contenedor */
+  height: auto;
+  display: block;
+}
+
+.image-row-two {
+  display: grid;
+  grid-template-columns: auto auto; /* dos columnas que se adaptan */
+  gap: 20px;
+  width: 100%; /* nunca se pasa del ancho del contenedor padre */
+  align-items: stretch; /* misma altura en ambas celdas */
+}
+
+.image-row-two img {
+  width: 100%; /* la imagen se ajusta al ancho de su celda */
+  height: 100%; /* llena toda la altura */
+  object-fit: cover; /* mantiene proporción recortando si es necesario */
+  display: block;
 }
