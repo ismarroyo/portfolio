@@ -354,3 +354,16 @@ h2 {
   object-fit: cover; /* mantiene proporción recortando si es necesario */
   display: block;
 }
+
+.video-wrapper-2 {
+  width: 100%; /* ocupa todo el ancho disponible */
+  aspect-ratio: 16/9; /* mantiene proporción del video */
+  overflow: hidden;
+}
+
+.video-wrapper-2 video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* usa "cover" si quieres que recorte para llenar */
+  display: block;
+}
