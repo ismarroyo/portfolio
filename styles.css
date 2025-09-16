@@ -51,6 +51,11 @@ nav a {
   font-size: 1rem;
 }
 
+.index {
+  color: black;
+  text-decoration: none;
+}
+
 /* Pie de página */
 footer {
   display: flex;
@@ -71,7 +76,9 @@ footer {
 .projects:link,
 .projects:visited,
 .about:link,
-.about:visited {
+.about:visited,
+.index:link,
+.inde:visited {
   color: black;
   text-decoration: none;
 }
@@ -83,7 +90,9 @@ footer {
 .projects:hover,
 .projects:active,
 .about:hover,
-.about:active {
+.about:active,
+.index:hover,
+.index:active {
   color: #626262;
 }
 
@@ -110,6 +119,17 @@ footer {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    aspect-ratio: 9 / 16; /* rectangular vertical */
+    max-height: 100vh; /* ocupa alto completo si quieres */
+  }
+
+  .video-container video {
+    object-fit: cover; /* o "contain" si prefieres ver todo el video */
+  }
 }
 
 .projects-grid {
@@ -272,9 +292,9 @@ footer {
 }
 
 .image-row img {
-  height: 400px; /* todas con la misma altura */
-  width: auto; /* ancho se ajusta según proporción */
-  object-fit: contain; /* asegura que se vea entera */
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* o "contain" si prefieres que no recorte */
   display: block;
 }
 
