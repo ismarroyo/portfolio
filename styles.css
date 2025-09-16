@@ -440,3 +440,40 @@ h2 {
     height: auto; /* mantiene proporción */
   }
 }
+
+@media (max-width: 768px) {
+  /* Apilar la sección about-content en una columna */
+  .about-content {
+    flex-direction: column; /* de fila a columna */
+    gap: 25px; /* espacio entre los bloques */
+  }
+
+  /* La imagen ocupa todo el ancho */
+  .image-box {
+    width: 100%;
+    flex: none;
+  }
+
+  /* Cada columna de texto ocupa todo el ancho */
+  .text-columns {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .text-col1,
+  .text-col2 {
+    flex: none;
+    width: 100%;
+  }
+
+  /* Textos dentro de text-col1-1 se apilan verticalmente */
+  .text-col1-1 {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: 10px; /* espacio entre textos */
+  }
+
+  .text1-col1-1,
+  .text2-col1-1 {
+    grid-column: 1; /* ocupan toda la columna */
+  }
+}
