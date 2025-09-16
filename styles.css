@@ -411,3 +411,32 @@ h2 {
     margin-left: 0; /* quitar margen automático */
   }
 }
+
+@media (max-width: 768px) {
+  /* Apilar contenido en una sola columna */
+  .two-columns {
+    flex-direction: column; /* pasa de fila a columna */
+  }
+
+  /* Sticky text ya no necesita estar fijo en móviles */
+  .sticky-text {
+    position: relative; /* quita sticky */
+    flex: none; /* que no intente mantener ancho fijo */
+    width: 100%; /* ocupa todo el ancho */
+    margin-bottom: 25px; /* separa del contenido de abajo */
+  }
+
+  /* Scroll images ocupan todo el ancho */
+  .scroll-images {
+    flex: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* espacio entre imágenes */
+  }
+
+  .scroll-images img {
+    width: 100%;
+    height: auto; /* mantiene proporción */
+  }
+}
