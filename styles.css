@@ -387,3 +387,27 @@ h2 {
   object-fit: contain; /* usa "cover" si quieres que recorte para llenar */
   display: block;
 }
+
+@media (max-width: 768px) {
+  /* Hacer que los proyectos se apilen en una sola columna */
+  .projects-grid {
+    grid-template-columns: 1fr; /* una columna */
+    gap: 25px; /* espacio entre los proyectos */
+  }
+
+  /* Ajustar la altura de las imágenes si quieres */
+  .project-card img {
+    height: auto; /* que se ajuste automáticamente al ancho */
+  }
+
+  /* Hacer que el texto de los proyectos se coloque verticalmente */
+  .project-info {
+    flex-direction: column; /* vertical */
+    gap: 10px; /* espacio entre left y right */
+  }
+
+  .project-info .right {
+    max-width: 100%; /* ocupa todo el ancho */
+    margin-left: 0; /* quitar margen automático */
+  }
+}
